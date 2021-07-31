@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { fetchComments } from "../redux/index";
 
 const Comments = ({ fetchComments, loading, comments }) => {
-  useEffect(({ fetchComments }) => {
+  useEffect(() => {
     fetchComments();
   }, []);
 
