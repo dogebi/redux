@@ -1,5 +1,5 @@
 import React from "react";
-import { addSubscriber } from "../redux/subscribers/actions";
+import { addSubscriber } from "../redux/index";
 import { connect } from "react-redux";
 
 // const Subscribers = (props) => {
@@ -20,9 +20,10 @@ const Subscribers = ({ count, addSubscriber }) => {
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ subscribers }) => {
+  //console.log(state);
   return {
-    count: state.count,
+    count: subscribers.count,
   };
 };
 
